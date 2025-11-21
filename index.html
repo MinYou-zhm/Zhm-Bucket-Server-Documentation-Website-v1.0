@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zhm Bucket - Minecraft服务器文档网站</title>
+  <!-- 站点主样式，可根据注释自由修改 -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- 浏览器标签栏图标（favicon）：如需更换，修改下方图片路径即可 -->
+  <link rel="icon" href="images/1757949780559_compressed.png" type="image/png" />
+</head>
+<body>
+  <!-- 顶部导航：标题与服务器Logo并列显示 -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <!-- 修改为你的Logo路径：images/1757949780559_compressed.png -->
+        <img class="logo-image" src="images/1757949780559_compressed.png" alt="Zhm Bucket Logo" />
+        <!-- 修改为你的服务器名 -->
+        <h1>Zhm Bucket</h1>
+      </div>
+      <div class="menu-toggle" id="menuToggle">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <!-- 如需调整导航顺序/名称，修改下方锚点文本和href即可 -->
+        <li><a href="#status">服务器状态</a></li>
+        <li><a href="#rules">规则</a></li>
+        <li><a href="#intro">介绍</a></li>
+        <li><a href="#commands">指令文档</a></li>
+        <li><a href="#screenshots">服务器截图</a></li>
+        <li><a href="#ops">管理员</a></li>
+        <li><a href="#contact">IP与QQ群</a></li>
+        <li><a href="#donate">赞助入口</a></li>
+        <li><a href="#about">关于本站</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- 英雄区：可在CSS中替换背景图，或在此添加介绍文案 -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h2>欢迎来到 <span class="highlight">Zhm Bucket</span> 服务器</h2>
+      <p>一个纯净的Minecraft服务器，欢迎加入一起生存与当肝帝！ Minecraft版本1.20.1</p>
+      <div class="ip-display">
+        <span class="ip-label">服务器IP：</span>
+        <!-- 如需更换IP，直接改此文本即可 -->
+        <span class="ip-address" id="serverIp">mc.zhmbucket.cn</span>
+        <button class="copy-btn" id="copyIpBtn">复制IP</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 服务器状态 -->
+  <section id="status" class="status-section">
+    <div class="container">
+      <h3 class="section-title">服务器状态</h3>
+      <div class="status-card">
+        <div class="status-image-container">
+          <!-- 服务器实时状态图片 -->
+          <img 
+            src="https://motd.minebbs.com/api/status_img?ip=om.rainplay.cn&port=55795&stype=je&theme=simple" 
+            alt="Zhm Bucket服务器实时状态" 
+            class="status-image" 
+            style="max-width: 100%; height: auto; border-radius: 8px;"
+          />
+          <!-- 刷新提示 -->
+          <div class="refresh-note" style="text-align: center; margin-top: 1rem; color: #666; font-size: 0.9rem;">
+            如需查询最新状态，请刷新网页
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 规则 -->
+  <section id="rules" class="rules-section">
+    <div class="container">
+      <h3 class="section-title">服务器规则</h3>
+      <div class="rules-list">
+        <!-- 复制下方rule-item块以添加更多规则 -->
+        <div class="rule-item">
+          <div class="rule-number">1</div>
+          <div class="rule-content">
+            <h4>禁止作弊与破坏行为</h4>
+            <p>包括但不限于外挂、恶意破坏他人建筑、论政、辱骂等。</p>
+          </div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-number">2</div>
+          <div class="rule-content">
+            <h4>友好交流，尊重他人</h4>
+            <p>文明用语，避免刷屏与恶意挑衅。</p>
+          </div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-number">3</div>
+          <div class="rule-content">
+            <h4>保护公共设施</h4>
+            <p>公共区域请勿随意破坏，维护良好服务器环境。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 服务器介绍 -->
+  <section id="intro" class="intro-section">
+    <div class="container intro-content">
+      <div class="intro-text">
+        <!-- 修改此处文字为你的服务器特色与玩法 -->
+        <h3>关于Zhm Bucket</h3>
+        <p>专注于轻松社交与自由生存，生电，建造，肝帝。</p>
+        <ul>
+          <li>稳定在线与良好维护</li>
+          <li>友好社区与互助氛围</li>
+          <li>纯净无mod,渣机也能进!</li>
+        </ul>
+      </div>
+      <div class="intro-image">
+        <!-- 可替换为其他展示图片路径 -->
+        <img class="featured-image" src="images/pic07.jpg" alt="服务器展示图" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 指令文档：可增加/修改分类与指令 -->
+  <section id="commands" class="commands-section">
+    <div class="container">
+      <h3 class="section-title">服务器指令文档</h3>
+      <div class="commands-tabs">
+         <!-- 在此添加或删除指令分类标签按钮 -->
+         <button class="tab-btn active" data-tab="basic">基础</button>
+         <button class="tab-btn" data-tab="tp">传送</button>
+         <button class="tab-btn" data-tab="dominion">领地</button>
+         <!-- 已撤销：Dominion 领地插件文档标签 -->
+       </div>
+      <div id="tab-basic" class="tab-content active">
+        <div class="command-item"><code>/cd</code><span>打开菜单（暂不可用）</span></div>
+        <div class="command-item"><code>/l <密码></code><span>登录</span></div>
+        <div class="command-item"><code>/reg <密码> <重复密码></code><span>注册</span></div>
+        <div class="command-item"><code>/tell <玩家ID></code><span>向指定玩家发送消息</span></div>
+        <div class="command-item"><code>/afk</code><span>把你标记为挂机状态</span></div>
+        <div class="command-item"><code>/spawn</code><span>将你传送到出生点</span></div>
+        <div class="command-item"><code>- -</code><span>服务器内含语言聊天GUI</span></div>
+        <div class="command-item"><code>/cm on</code><span>开启连锁挖矿</span></div>
+        <div class="command-item"><code>/cm off</code><span>关闭连锁挖矿</span></div>
+
+      </div>
+      <div id="tab-tp" class="tab-content">
+        <div class="command-item"><code>/tpa <玩家ID></code><span>请求传送到玩家</span></div>
+        <div class="command-item"><code>/tpaccept</code><span>接受传送请求</span></div>
+        <div class="command-item"><code>/tpahere <玩家ID> <player></code><span>请求玩家传送此处</span></div>
+        <div class="command-item"><code>/tpadeny</code><span>拒绝传送请求</span></div>
+        <div class="command-item"><code>/tpacancel</code><span>取消传送请求</span></div>
+      </div>
+    </div>
+      <!-- 新增：Dominion 领地插件文档内容 -->
+      <div id="tab-dominion" class="tab-content">
+        <!-- 说明：此处主要提供插件官方文档链接，详细用法请跳转查看 -->
+        <p>Dominion 领地插件使用说明请查看以下文档：</p>
+        <p><a href="https://dominion.lunadeer.cn/notes/doc/player/" target="_blank" rel="noopener">Dominion 领地插件文档（玩家手册）</a></p>
+        <p>提示：与领地相关的指令、权限与使用方式均在该文档中有详细说明。</p>
+      <!-- 已撤销：Dominion 领地插件文档内容（如需恢复，请再次添加按钮与内容块） -->
+    </div>
+    <!-- 外部文档：Dominion 领地插件玩家手册，仅插入链接，不修改其他结构 -->
+    <!-- 已撤销：Dominion 领地插件文档内容（如需恢复，请再次添加按钮与内容块） -->
+    </div>
+  </section>
+
+  <!-- 服务器截图：替换为你的图片路径（默认使用pic07.jpg） -->
+  <section id="screenshots" class="screenshots-section">
+    <div class="container">
+      <h3 class="section-title">服务器截图</h3>
+      <!-- 将你上传到 images/ 目录下的图片按需添加到下方列表。
+           只需复制一个 .screenshot-item 块并把 src 改为你的文件名即可。 -->
+      <div class="screenshots-grid">
+        <div class="screenshot-item">
+          <img class="screenshot" src="images/pic07.jpg" alt="服务器美景" />
+          <div class="screenshot-caption">首页图片</div>
+        </div>
+        <!-- 以下为你已上传的图片示例展示；可随时删减或改标题 -->
+        <div class="screenshot-item">
+          <img class="screenshot" src="images/2025-09-26_23.28.22.png" alt="屋顶标语夜景" />
+          <div class="screenshot-caption">玩家基地背面</div>
+        </div>
+        <div class="screenshot-item">
+          <img class="screenshot" src="images/2025-09-27_00.04.28.png" alt="公告台与栈道" />
+          <div class="screenshot-caption">出生点</div>
+        </div>
+        <div class="screenshot-item">
+          <img class="screenshot" src="images/2025-09-27_00.05.08.png" alt="信标金字塔" />
+          <div class="screenshot-caption">玩家基地·信标金字塔</div>
+        </div>
+        <div class="screenshot-item">
+          <img class="screenshot" src="images/2025-09-27_00.06.02.png" alt="白天标语露台" />
+          <div class="screenshot-caption">瞭望台</div>
+        </div>
+        <div class="screenshot-item">
+          <img class="screenshot" src="images/2025-09-27_00.07.36.png" alt="书架集市与房屋" />
+          <div class="screenshot-caption">玩家基地正面</div>
+        </div>
+        <div class="screenshot-item">
+          <img class="screenshot" src="images/2025-09-29_19.13.34.png" alt="HUD演示界面" />
+          <div class="screenshot-caption">出生点附近</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 管理员（OP）：复制op-card块添加更多管理员 -->
+  <section id="ops" class="ops-section">
+    <div class="container">
+      <h3 class="section-title">服务器管理员</h3>
+      <div class="ops-grid">
+        <div class="op-card">
+          <!-- 管理员头像：将 src 改为你的图片文件名，例如 images/114514awa.jpg -->
+          <div class="op-avatar"><img src="images/114514awa.jpg" alt="管理员头像" /></div>
+          <div class="op-info">
+            <!-- 管理员昵称：按需修改 -->
+            <h4>MinYou_mc</h4>
+            <div class="op-role">服主</div>
+            <!-- 简介：可自由替换为更详细的文本 -->
+            <div class="op-desc">一个平平无奇的服主ovo</div>
+          </div>
+        </div>
+        <!-- 新增管理员 -->
+        <div class="op-card">
+          <!-- 管理员头像 -->
+          <div class="op-avatar"><img src="images/op1.jpg" alt="灰玄头像" /></div>
+          <div class="op-info">
+            <!-- 管理员昵称 -->
+            <h4>灰玄</h4>
+            <div class="op-role">协管员</div>
+            <!-- 简介 -->
+            <div class="op-desc">被名琉强制♂收编的协管员~</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系我们：包含IP与QQ群入口 -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h3 class="section-title">联系与加入</h3>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i>IP</i>
+          <div class="contact-content">
+            <h3>服务器IP</h3>
+            <div>mc.zhmbucket.cn</div>
+            <button class="copy-btn small" id="copyIpBtn2">复制IP</button>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i>QQ</i>
+          <div class="contact-content">
+            <h3>QQ群</h3>
+            <!-- 已替换为你的真实QQ群邀请链接 -->
+            <a class="join-btn" href="https://qm.qq.com/q/FutMtNQm2s" target="_blank" rel="noopener">加入QQ群</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 赞助入口：替换为你的赞助二维码图片IMG_2494.JPG -->
+  <section id="donate" class="donate-section">
+    <div class="container donate-content">
+      <div class="donate-text">
+        <h3>赞助我们</h3>
+        <p>你的支持将帮助服务器更稳定、更好玩！</p>
+      </div>
+      <div class="donate-qr">
+        <div class="qr-container">
+          <img class="qr-image" src="images/IMG_2494.JPG" alt="赞助二维码" />
+          <div class="qr-note">扫码赞助，感谢你的支持！</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于本站：在此填写网站说明或致谢 -->
+  <footer id="about" class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>关于此网站</h3>
+          <p>本网站用于展示Zhm Bucket服务器信息与文档。</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2025 MinYou 所有权利保留 | 由雨云提供MC服务器 | 在线地图由Dynmap®插件实现  | 服务器有些功能需要自行探索喔awa</div>
+        <div class="footer-about"><a href="#about">更多信息</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 交互脚本：菜单、复制IP、标签切换等 -->
+  <script src="js/scripts.js"></script>
+</body>
+</html>
