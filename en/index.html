@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zhm Bucket - Minecraft Server Documentation Website</title>
+  <!-- Main site styles, can be freely modified according to comments -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <!-- Browser tab icon (favicon): to replace, modify the image path below -->
+  <link rel="icon" href="../images/1757949780559_compressed.png" type="image/png" />
+</head>
+<body>
+  <!-- Top navigation: title and server logo displayed side by side -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <!-- Change to your logo path: images/1757949780559_compressed.png -->
+        <img class="logo-image" src="../images/1757949780559_compressed.png" alt="Zhm Bucket Logo" />
+        <!-- Change to your server name -->
+        <h1>Zhm Bucket</h1>
+      </div>
+      <div class="menu-toggle" id="menuToggle">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <!-- To adjust navigation order/names, modify the anchor text and href below -->
+        <li><a href="#status">Server Status</a></li>
+        <li><a href="#rules">Rules</a></li>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#commands">Command Documentation</a></li>
+        <li><a href="#screenshots">Server Screenshots</a></li>
+        <li><a href="#map">Server Map</a></li>
+        <li><a href="#ops">Administrators</a></li>
+        <li><a href="#contact">IP & QQ Group</a></li>
+        <li><a href="#donate">Donation</a></li>
+        <li><a href="#about">About Site</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero section: background image can be replaced in CSS, or add introduction text here -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h2>Welcome to <span class="highlight">Zhm Bucket</span> Server</h2>
+      <p>A pure Minecraft server, welcome to join for survival and being a hard worker! Minecraft version 1.20.1</p>
+      <div class="ip-display">
+        <span class="ip-label">Server IP:</span>
+        <!-- To change IP, modify this text directly -->
+        <span class="ip-address" id="serverIp">mc.zhmbucket.cn</span>
+        <button class="copy-btn" id="copyIpBtn">Copy IP</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Server Status -->
+  <section id="status" class="status-section">
+    <div class="container">
+      <h3 class="section-title">Server Status</h3>
+      <div class="status-card">
+        <div class="status-image-container">
+          <!-- Server real-time status image -->
+          <img 
+            src="https://motd.minebbs.com/api/status_img?ip=mc.zhmbucket.cn&stype=auto&theme=simple" 
+            alt="Zhm Bucket server real-time status" 
+            class="status-image" 
+            style="max-width: 100%; height: auto; border-radius: 8px;"
+          />
+          <!-- Refresh note -->
+          <div class="refresh-note" style="text-align: center; margin-top: 1rem; color: #666; font-size: 0.9rem;">
+            To check the latest status, please refresh the page
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rules -->
+  <section id="rules" class="rules-section">
+    <div class="container">
+      <h3 class="section-title">Server Rules</h3>
+      <div class="rules-list">
+        <!-- Copy the rule-item block below to add more rules -->
+        <div class="rule-item">
+          <div class="rule-number">1</div>
+          <div class="rule-content">
+            <h4>No Cheating or Griefing</h4>
+            <p>Includes but not limited to hacks, griefing other players' buildings, political discussions, insults, etc.</p>
+          </div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-number">2</div>
+          <div class="rule-content">
+            <h4>Friendly Communication, Respect Others</h4>
+            <p>Use civilized language, avoid spamming and malicious provocation.</p>
+          </div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-number">3</div>
+          <div class="rule-content">
+            <h4>Protect Public Facilities</h4>
+            <p>Do not destroy public areas at will, maintain a good server environment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Server Introduction -->
+  <section id="intro" class="intro-section">
+    <div class="container intro-content">
+      <div class="intro-text">
+        <!-- Modify this text for your server features and gameplay -->
+        <h3>About Zhm Bucket</h3>
+        <p>Focused on relaxed socializing and free survival, redstone, building, and being a hard worker.</p>
+        <ul>
+          <li>Stable online status and good maintenance</li>
+          <li>Friendly community and helpful atmosphere</li>
+          <li>Pure vanilla, low-end computers can join!</li>
+        </ul>
+      </div>
+      <div class="intro-image">
+        <!-- Can be replaced with other display image path -->
+        <img class="featured-image" src="../images/pic07.jpg" alt="Server showcase image" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Command Documentation: can add/modify categories and commands -->
+  <section id="commands" class="commands-section">
+    <div class="container">
+      <h3 class="section-title">Server Command Documentation</h3>
+      <div class="commands-tabs">
+         <!-- Add or remove command category tab buttons here -->
+         <button class="tab-btn active" data-tab="basic">Basic</button>
+         <button class="tab-btn" data-tab="tp">Teleport</button>
+         <button class="tab-btn" data-tab="dominion">Land Claims</button>
+         <!-- Revoked: Dominion land claims plugin documentation tab -->
+       </div>
+      <div id="tab-basic" class="tab-content active">
+        <div class="command-item"><code>/cd</code><span>Open menu (temporarily unavailable)</span></div>
+        <div class="command-item"><code>/l &lt;password&gt;</code><span>Login</span></div>
+        <div class="command-item"><code>/reg &lt;password&gt; &lt;repeat password&gt;</code><span>Register</span></div>
+        <div class="command-item"><code>/tell &lt;player ID&gt;</code><span>Send message to specific player</span></div>
+        <div class="command-item"><code>/afk</code><span>Mark you as AFK status</span></div>
+        <div class="command-item"><code>/spawn</code><span>Teleport you to spawn point</span></div>
+        <div class="command-item"><code>- -</code><span>Server includes voice chat GUI</span></div>
+      </div>
+      <div id="tab-tp" class="tab-content">
+        <div class="command-item"><code>/tpa &lt;player ID&gt;</code><span>Request to teleport to player</span></div>
+        <div class="command-item"><code>/tpaccept</code><span>Accept teleport request</span></div>
+        <div class="command-item"><code>/tpahere &lt;player ID&gt; &lt;player&gt;</code><span>Request player to teleport here</span></div>
+        <div class="command-item"><code>/tpadeny</code><span>Deny teleport request</span></div>
+        <div class="command-item"><code>/tpacancel</code><span>Cancel teleport request</span></div>
+      </div>
+    </div>
+      <!-- Added: Dominion land claims plugin documentation content -->
+      <div id="tab-dominion" class="tab-content">
+        <!-- Note: This mainly provides a link to the official plugin documentation, please check it for detailed usage -->
+        <p>Please check the following documentation for Dominion land claims plugin usage:</p>
+        <p><a href="https://dominion.lunadeer.cn/notes/doc/player/" target="_blank" rel="noopener">Dominion Land Claims Plugin Documentation (Player Manual)</a></p>
+        <p>Tip: Commands, permissions, and usage methods related to land claims are all detailed in that documentation.</p>
+      <!-- Revoked: Dominion land claims plugin documentation content (to restore, add button and content block again) -->
+    </div>
+    <!-- External documentation: Dominion land claims plugin player manual, only inserting link, not modifying other structures -->
+    <!-- Revoked: Dominion land claims plugin documentation content (to restore, add button and content block again) -->
+    </div>
+  </section>
+
+  <!-- Server Screenshots: replace with your image paths (default uses pic07.jpg) -->
+  <section id="screenshots" class="screenshots-section">
+    <div class="container">
+      <h3 class="section-title">Server Screenshots</h3>
+      <!-- Add your images uploaded to the images/ directory to the list below as needed.
+           Just copy a .screenshot-item block and change the src to your filename. -->
+      <div class="screenshots-grid">
+        <div class="screenshot-item">
+          <img class="screenshot" src="../images/pic07.jpg" alt="Server scenery" />
+          <div class="screenshot-caption">Home page image</div>
+        </div>
+        <!-- The following are examples of your uploaded images; can be deleted or titled at any time -->
+        <div class="screenshot-item">
+          <img class="screenshot" src="../images/2025-09-26_23.28.22.png" alt="Roof slogan night view" />
+          <div class="screenshot-caption">Player base back</div>
+        </div>
+        <div class="screenshot-item">
+          <img class="screenshot" src="../images/2025-09-27_00.04.28.png" alt="Announcement platform and栈道" />
+          <div class="screenshot-caption">Spawn point</div>
+        </div>
+        <div class="screenshot-item">
+          <img class="screenshot" src="../images/2025-09-27_00.05.08.png" alt="Beacon pyramid" />
+          <div class="screenshot-caption">Player base · Beacon pyramid</div>
+        </div>
+        <div class="screenshot-item">
+          <img class="screenshot" src="../images/2025-09-27_00.06.02.png" alt="Day slogan terrace" />
+          <div class="screenshot-caption">Observation tower</div>
+        </div>
+        <div class="screenshot-item">
+          <img class="screenshot" src="../images/2025-09-27_00.07.36.png" alt="Bookshelf market and houses" />
+          <div class="screenshot-caption">Player base front</div>
+        </div>
+        <div class="screenshot-item">
+          <img class="screenshot" src="../images/2025-09-29_19.13.34.png" alt="HUD demonstration interface" />
+          <div class="screenshot-caption">Near spawn point</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Server Map -->
+  <section id="map" class="map-section">
+    <div class="container">
+      <h3 class="section-title">Server Online Map</h3>
+      <div class="map-container">
+        <iframe 
+          src="http://ad.rainplay.cn:55643" 
+          title="Zhm Bucket server online map" 
+          class="map-iframe"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+        <p class="map-description">View the server's real-time map, explore player buildings and terrain.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Administrators (OP): copy op-card block to add more administrators -->
+  <section id="ops" class="ops-section">
+    <div class="container">
+      <h3 class="section-title">Server Administrators</h3>
+      <div class="ops-grid">
+        <div class="op-card">
+          <!-- Administrator avatar: change src to your image filename, e.g., images/114514awa.jpg -->
+          <div class="op-avatar"><img src="../images/114514awa.jpg" alt="Administrator avatar" /></div>
+          <div class="op-info">
+            <!-- Administrator nickname: modify as needed -->
+            <h4>MinYou_mc</h4>
+            <div class="op-role">Server Owner</div>
+            <!-- Introduction: can be freely replaced with more detailed text -->
+            <div class="op-desc">An ordinary server owner ovo</div>
+          </div>
+        </div>
+        <!-- Added administrator -->
+        <div class="op-card">
+          <!-- Administrator avatar -->
+          <div class="op-avatar"><img src="../images/op1.jpg" alt="Hui Xuan avatar" /></div>
+          <div class="op-info">
+            <!-- Administrator nickname -->
+            <h4>Hui Xuan</h4>
+            <div class="op-role">Assistant Manager</div>
+            <!-- Introduction -->
+            <div class="op-desc">Assistant manager forced♂ to join by Ming Liu~</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us: includes IP and QQ group entrance -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h3 class="section-title">Contact & Join</h3>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i>IP</i>
+          <div class="contact-content">
+            <h3>Server IP</h3>
+            <div>mc.zhmbucket.cn</div>
+            <button class="copy-btn small" id="copyIpBtn2">Copy IP</button>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i>QQ</i>
+          <div class="contact-content">
+            <h3>QQ Group</h3>
+            <!-- Replaced with your real QQ group invitation link -->
+            <a class="join-btn" href="https://qm.qq.com/q/FutMtNQm2s" target="_blank" rel="noopener">Join QQ Group</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation entrance: replace with your donation QR code image IMG_2494.JPG -->
+  <section id="donate" class="donate-section">
+    <div class="container donate-content">
+      <div class="donate-text">
+        <h3>Support Us</h3>
+        <p>Your support will help the server become more stable and fun!</p>
+      </div>
+      <div class="donate-qr">
+        <div class="qr-container">
+          <img class="qr-image" src="../images/IMG_2494.JPG" alt="Donation QR code" />
+          <div class="qr-note">Scan to donate, thank you for your support!</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About the site: fill in site explanations or acknowledgments here -->
+  <footer id="about" class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>About This Website</h3>
+          <p>This website is used to display Zhm Bucket server information and documentation.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2025 MinYou All Rights Reserved | MC server provided by Rainyun | Online map powered by Dynmap® plugin</div>
+        <div class="footer-about"><a href="#about">More Information</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive scripts: menu, copy IP, tab switching, etc. -->
+  <script src="../js/scripts.js"></script>
+</body>
+</html>
