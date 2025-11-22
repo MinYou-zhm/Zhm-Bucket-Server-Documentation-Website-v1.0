@@ -27,11 +27,7 @@
 
 5. **服务器截图**
    - 替换为您自己的服务器截图
-   - 保持文件命名一致或更新HTML中的引用路径
-
-6. **服务器地图**
-   - 更新地图iframe的URL为您自己的地图服务地址
-   - 调整地图描述文本
+   - 保持文件命名一致或更新HTML中的引用
 
 ### English
 The folder 'en' in the source code provides you with the English version of the HTML.
